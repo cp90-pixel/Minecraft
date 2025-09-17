@@ -3474,6 +3474,8 @@ blockDurability[7]=30;
 blockDurability[8]=2000;
 
 blockDurability[9]=5;
+blockDurability[11]=0;
+blockDurability[13]=0;
 
 blockDurability[15]=0;
 
@@ -3532,6 +3534,7 @@ blockDurability[42]=0;
 blockDurability[43]=120;
 
 blockDurability[44]=0;
+blockDurability[45]=200;
 
 blockDurability[46]=10;
 
@@ -3544,7 +3547,9 @@ blockDurability[51]=85;
 blockDurability[52]=80;
 blockDurability[53]=85;
 blockDurability[54]=20;
+blockDurability[55]=20;
 blockDurability[57]=60;
+blockDurability[58]=200;
 blockDurability[59]=55;
 blockDurability[61]=70;
 
@@ -26056,6 +26061,9 @@ if(mPressed&&mouseButton===LEFT&&inventory===false&&news===false&&world[a][b]!==
         if(blockStrength===null){
 
             selDurability = blockDurability[world[a][b]];
+            if(selDurability === undefined || isNaN(selDurability)){
+                selDurability = 0;
+            }
 
             if(gamemode===1){
 
