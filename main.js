@@ -118,6 +118,36 @@ var button = function(x, y, l, w, f, t, txt){
 
 };
 
+var withinBounds = function(bounds, x, y){
+
+    return x>bounds.x&&x<bounds.x+bounds.width&&y>bounds.y&&y<bounds.y+bounds.height;
+
+};
+
+var drawCloseButton = function(bounds){
+
+    var innerOffset = 4;
+
+    fill(189, 0, 0);
+
+    noStroke();
+
+    rect(bounds.x, bounds.y, bounds.width, bounds.height, 3);
+
+    stroke(255, 255, 255);
+
+    strokeWeight(2);
+
+    line(bounds.x+innerOffset, bounds.y+innerOffset, bounds.x+bounds.width-innerOffset, bounds.y+bounds.height-innerOffset);
+
+    line(bounds.x+bounds.width-innerOffset, bounds.y+innerOffset, bounds.x+innerOffset, bounds.y+bounds.height-innerOffset);
+
+};
+
+var tutorialCloseButton = {x: 370, y: 12, width: 18, height: 18};
+
+var inventoryCloseButton = {x: 320, y: 22, width: 18, height: 18};
+
 //All inventory objects with values >= 300 are
 
 //considered ITEMS. Things that cannot be placed
@@ -24707,7 +24737,19 @@ if(mPressed&&mouseButton===RIGHT){
 
     }
 
-    if(mouseX>=70&&mouseX<=90&&mouseY>=280&&mPressed&&mouseY<=300&&invScroll>0){
+    if(withinBounds(inventoryCloseButton, mouseX, mouseY)){
+
+        if(mPressed&&mouseButton===LEFT){
+
+            inventory=false;
+
+            keyCode=0;
+
+            mPressed=false;
+
+        }
+
+    }else if(mouseX>=70&&mouseX<=90&&mouseY>=280&&mPressed&&mouseY<=300&&invScroll>0){
 
         invScroll--;
 
@@ -26960,6 +27002,8 @@ if(inventory===true){
 
     rect(50, 10, 300, 300);
 
+    drawCloseButton(inventoryCloseButton);
+
     textSize(20);
 
     fill(0, 0, 0);
@@ -27474,6 +27518,8 @@ if(e2open===true&&news===false){
 
     rect(100, 0, 300, 50);
 
+    drawCloseButton(tutorialCloseButton);
+
     textSize(20);
 
     fill(0, 0, 0);
@@ -27485,6 +27531,14 @@ if(e2open===true&&news===false){
     strokeWeight(2);
 
     noStroke();
+
+    if(mPressed&&mouseButton===LEFT&&withinBounds(tutorialCloseButton, mouseX, mouseY)){
+
+        e2open=false;
+
+        mPressed=false;
+
+    }
 
 }
 
