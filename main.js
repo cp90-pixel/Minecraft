@@ -29887,33 +29887,33 @@ mousePressed = function(){mPressed=true;};
 
 mouseReleased = function(){mPressed=false;};
 
-keyReleased = function(){keys[keyCode]=false;
-
-        if(keyCode===LEFT){
-
-            keys[65]=false;
-
-        }if(keyCode===RIGHT){
-
-            keys[68]=false;
-
-        }if(keyCode===UP){
-
-            keys[87]=false;
-
-        }if(keyCode===DOWN){
-
-            keys[83]=false;
-
+function keyReleased(event){
+    var code = keyCode;
+    if(event){
+        var eventCode = typeof event.which === "number" ? event.which : event.keyCode;
+        if(typeof eventCode === "number"){
+            code = eventCode;
+            keyCode = eventCode;
         }
-
-    if(keyCode===68||keyCode===65||keyCode===LEFT||keyCode===RIGHT){
-
-        keyTimer=5;isSprinting=false;
-
     }
-
-};
+    keys[code] = false;
+    if(code===LEFT){
+        keys[65]=false;
+    }
+    if(code===RIGHT){
+        keys[68]=false;
+    }
+    if(code===UP){
+        keys[87]=false;
+    }
+    if(code===DOWN){
+        keys[83]=false;
+    }
+    if(code===68||code===65||code===LEFT||code===RIGHT){
+        keyTimer=5;
+        isSprinting=false;
+    }
+}
 
 var _minecraftGlobalScope = (function(){
     if(typeof globalThis !== "undefined"){
