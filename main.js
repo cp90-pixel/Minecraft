@@ -29852,3 +29852,81 @@ keyReleased = function(){keys[keyCode]=false;
     }
 
 };
+
+if(typeof window !== "undefined"&&typeof window.addEventListener === "function"&&typeof window.__minecraftKeyHandlersInstalled === "undefined"&&typeof window.Processing === "undefined"){
+
+    var _minecraftPreventDefaultKeys = {
+
+        32: true,
+
+        37: true,
+
+        38: true,
+
+        39: true,
+
+        40: true
+
+    };
+
+    var _minecraftHandleKeyDown = function(event){
+
+        var code = event.which||event.keyCode;
+
+        if(typeof code === "number"){
+
+            keyCode = code;
+
+            if(_minecraftPreventDefaultKeys[code]){
+
+                event.preventDefault();
+
+            }
+
+            if(typeof keyPressed === "function"){
+
+                keyPressed(event);
+
+            }
+
+        }
+
+    };
+
+    var _minecraftHandleKeyUp = function(event){
+
+        var code = event.which||event.keyCode;
+
+        if(typeof code === "number"){
+
+            keyCode = code;
+
+            if(_minecraftPreventDefaultKeys[code]){
+
+                event.preventDefault();
+
+            }
+
+            if(typeof keyReleased === "function"){
+
+                keyReleased(event);
+
+            }
+
+        }
+
+    };
+
+    window.addEventListener("keydown", _minecraftHandleKeyDown, false);
+
+    window.addEventListener("keyup", _minecraftHandleKeyUp, false);
+
+    window.addEventListener("blur", function(){
+
+        keys = [];
+
+    }, false);
+
+    window.__minecraftKeyHandlersInstalled = true;
+
+}
