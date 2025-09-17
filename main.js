@@ -29915,7 +29915,20 @@ keyReleased = function(){keys[keyCode]=false;
 
 };
 
-if(typeof window !== "undefined"&&typeof window.addEventListener === "function"&&typeof window.__minecraftKeyHandlersInstalled === "undefined"&&typeof window.Processing === "undefined"){
+var _minecraftGlobalScope = (function(){
+    if(typeof globalThis !== "undefined"){
+        return globalThis;
+    }
+    if(typeof self !== "undefined"){
+        return self;
+    }
+    if(typeof global !== "undefined"){
+        return global;
+    }
+    return undefined;
+})();
+
+if(_minecraftGlobalScope&&typeof _minecraftGlobalScope.addEventListener === "function"&&typeof _minecraftGlobalScope.__minecraftKeyHandlersInstalled === "undefined"&&typeof _minecraftGlobalScope.Processing === "undefined"){
 
     var _minecraftPreventDefaultKeys = {
 
@@ -29979,16 +29992,16 @@ if(typeof window !== "undefined"&&typeof window.addEventListener === "function"&
 
     };
 
-    window.addEventListener("keydown", _minecraftHandleKeyDown, false);
+    _minecraftGlobalScope.addEventListener("keydown", _minecraftHandleKeyDown, false);
 
-    window.addEventListener("keyup", _minecraftHandleKeyUp, false);
+    _minecraftGlobalScope.addEventListener("keyup", _minecraftHandleKeyUp, false);
 
-    window.addEventListener("blur", function(){
+    _minecraftGlobalScope.addEventListener("blur", function(){
 
         keys = [];
 
     }, false);
 
-    window.__minecraftKeyHandlersInstalled = true;
+    _minecraftGlobalScope.__minecraftKeyHandlersInstalled = true;
 
 }
