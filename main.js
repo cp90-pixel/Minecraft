@@ -28905,7 +28905,7 @@ if(gamemode===1){
 
 };
 
-keyPressed = function(){
+function keyPressed(event){
 
     if(!onInputBox||keyCode===SHIFT){
 
