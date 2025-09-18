@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxel Craft</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="instructions" class="overlay">
+      <div class="overlay-card">
+        <h1>Voxel Craft</h1>
+        <p>Click anywhere to enter the world.</p>
+        <div class="hint">Use WASD to fly, left click to mine, right click to place.</div>
+      </div>
+    </div>
+    <div id="hud">
+      <div class="hud-row">
+        <div class="hud-title">Voxel Craft</div>
+        <div id="block-indicator">Selected: Grass</div>
+      </div>
+      <div class="hud-row">
+        <div class="controls">
+          <h2>Controls</h2>
+          <ul>
+            <li><span>Click</span> to lock the cursor and start playing</li>
+            <li><span>W A S D</span> to fly</li>
+            <li><span>Space</span> to move up, <span>Shift</span> to move down</li>
+            <li><span>Left click</span> to mine a block</li>
+            <li><span>Right click</span> to place a block</li>
+            <li><span>Number keys (1-5)</span> to change block type</li>
+            <li><span>Esc</span> to free the cursor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="crosshair"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
