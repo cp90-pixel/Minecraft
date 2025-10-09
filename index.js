@@ -1,238 +1,10 @@
-var username = "Steve";//<== Change username
+var username = "Steve";
 
-/***********-Bennimus Studios-******************************
 
-  *
-  * 
-  * My account's no longer banned! Please feel free to check
-  * out development of Minecraft 2.0! (Now a standalone project)
-  * 
-  * |
-  * V
-  * 
-https://www.khanacademy.org/computer-programming/minecraft-2/6565657770147840
-  * 
-  * 
 
-  *HOW TO PLAY:
+var blocks = 61;
 
-  *A to move left, D to move right, Space to jump.
-
-  *Left click a block to destroy it.
-
-  *Right click to place a block.
-
-  *Use the numbers to pick which block you have selected.
-
-  *Numbers follow according to the hotbar at the bottom of
-
-  *the screen.
-
-  *Press E to open your inventory. Once open, aim your cursor
-
-  *over the block you want to select, then press the number
-
-  *according to the slot on the hotbar you want to place it
-
-  *in.
-
-  *Give me your feedback :)
-
-  *Report bugs in Tips & Feedback
-
-  * 
-
-  *Version 1.14
-
-  *You've asked, I've provided.
-  * 
-  * +Endermen, Ender Pearls
-  * +End, Eyes of Ender
-  * +Ender Dragon
-  * +Blazes, Blaze rods, Blaze powder
-  * +Stone Bricks, Nether Bricks
-  * +Trees and stuff in the background
-  * +Fixed beds being non-existant
-
-  * -Removed Herobrine
-
-  * 
-
-  * DATA VALUES:
-
-  * (those marked with * are unobtainable except through
-
-  * inventory hacking or /give)
-
-  * (those marked with ** are generated in the map but
-
-  * otherwise unobtainable)
-
-  * 0:Air
-
-  * 1:Stone
-
-  * 2:Grass
-
-  * 3:Dirt
-
-  * 4:Cobblestone
-
-  * 5:Wooden Planks
-
-  * 6:Bricks
-
-  * 7:Log
-
-  * 8:Obsidian
-
-  * 9:Leaves
-
-  * 10:Bedrock*
-
-  * 11:Water
-
-  * 12:Flowing Water*
-
-  * 13:Lava
-
-  * 14:Flowing Lava*
-
-  * 15:TNT
-
-  * 16:Sapling
-
-  * 17:Fire
-
-  * 18:Nether Portal*
-
-  * 19:Netherrack
-
-  * 20:Sand
-
-  * 21:Gravel
-
-  * 22:Coal ore*
-
-  * 23:Iron ore
-
-  * 24:Gold ore
-
-  * 25:Lapis ore*
-
-  * 26:DIAMOND OREZ*
-
-  * 27:Crafting table
-
-  * 28:Door
-
-  * 29:Upper door
-
-  * 30:Ladder
-
-  * 31:Cactus
-
-  * 32:Ice
-
-  * 33:Furnace
-
-  * 34:Chest
-
-  * 35:Mossy Cobblestone
-
-  * 36:Monster spawner
-
-  * 37:Block of Iron
-
-  * 38:Block of Gold
-
-  * 39:Block of Diamond
-
-  * 40:Torch
-
-  * 41:Sugar cane
-
-  * 42:Redstone (dust)
-
-  * 43:Redstone ore
-
-  * 44:Redstone torch
-
-  * 45:Command block
-
-  * 46:Farmland
-
-  * 47:Tall grass
-
-  * 48:Wheat
-
-  * 49:Emerald Ore
-
-  * 50:Block of Emerald
-
-  * 51:Block of Redstone
-
-  * 52:Block of Coal
-
-  * 53:Block of Lapis
-
-  * 54:Wool
-
-  * 55:Bed
-
-  * 300:Stick
-
-  * 301:Coal
-
-  * 302:Iron ingot
-
-  * 303:Gold ingot
-
-  * 304:Lapis Lazuli
-
-  * 305:DIAMONDZ
-
-  * 306:Flint
-
-  * 307-311:Picks
-
-  * 312-316:Swords
-
-  * 317:Raw Porkchop
-
-  * 318:Gunpowder
-
-  * 319:Cooked Porkchop
-
-  * 320-335: Leather-Diamond Armor
-
-  * 336:Leather
-
-  * 337:Bucket
-
-  * 338:Milk bucket
-
-  * 339:Paper
-
-  * 340:Firework
-
-  * 341-345:Hoes
-
-  * 346:Wheat
-
-  * 347:Bread
-
-  * 348:Rotten Flesh
-
-  * 349:Emerald
-
-  * 350:Shears
-
-************************************************************/
-
-var blocks = 61;//Number of blocks
-
-var items = 355;//Number of items + 299
+var items = 355;
 var isSleeping = false;
 
 var sleepTimer = 0;
@@ -348,13 +120,13 @@ var button = function(x, y, l, w, f, t, txt){
 
 };
 
-//All inventory objects with values >= 300 are
 
-//considered ITEMS. Things that cannot be placed
+
+
 
 items++;blocks++;
 
-//Variable declaration
+
 
 var solidBlocks = [false,true,true,true,true,true,true,true,true,true,true,false,false,false,false,true,false,false,false,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,false,false,false,true,false,true,true,false,false,true,true,true,true,true,true,false,false,true,true,true,false,true];
 
@@ -3057,7 +2829,7 @@ var posB2;
 
 var posA2;
 
-//                  V V CHANGE YOUR SKIN V V
+
 
 var skin = getImage("cute/CharacterBoy");
 
@@ -3808,7 +3580,7 @@ var h;
 
 var pickedUp = false;
 
-//pick up items
+
 
 var 
 
@@ -3904,7 +3676,7 @@ for(var g = 0; g < amount; g++){
 
 };
 
-//spawn mobs
+
 
 var spawnMobs = function(x, y, type,d){
 
@@ -4145,7 +3917,7 @@ var setPower = function(y, x, newPower){
 
 };
 
-//This function makes the world truly infinite
+
 
 var genWorld = function(){
     if(!end){
@@ -4707,11 +4479,11 @@ if(itemSeed<25){
 
         if(round(random(0, 5))){}else{
 
-            //generate ores
+            
             if(!round(random(0, 15))&&d>30&&d<38){
                 world[d][world[0].length]=49;
             }
-            //coal
+            
 
             if(round(random(0, 3))){}else{
 
@@ -5013,7 +4785,7 @@ if(itemSeed<25){
 
             }
 
-            //DIAMONDZ
+            
 
             if(round(random(0, 20))){}else{
 
@@ -7009,7 +6781,7 @@ var drawBlocks = function(x, g, h){
 
 var herp;
 
-//draw the Inventory
+
 
 var drawInventory = function(invX, invY, space){
 
@@ -7143,13 +6915,13 @@ var drawBlock = function(x,y){
 
     switch(world[y][x]){
 
-            //air (no code)
+            
 
             case 0:
 
                 break;
 
-            //stone
+            
 
             case 1:
 
@@ -7351,7 +7123,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //grass
+            
 
             case 2:
 
@@ -7707,7 +7479,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //dirt
+            
 
             case 3:
 
@@ -7919,7 +7691,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //cobblestone
+            
 
             case 4:
 
@@ -8235,7 +8007,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //wooden planks
+            
 
             case 5:
 
@@ -8593,7 +8365,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //bricks
+            
 
             case 6:
 
@@ -8959,7 +8731,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //log
+            
 
             case 7:
 
@@ -9179,7 +8951,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //obsidian
+            
 
             case 8:
 
@@ -9381,7 +9153,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //leaves
+            
 
             case 9:
 
@@ -9775,7 +9547,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //bedrock
+            
 
             case 10:
 
@@ -9987,7 +9759,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //water
+            
 
             case 11:
 
@@ -10290,7 +10062,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //flowing water
+            
 
             case 12:
 
@@ -10490,7 +10262,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //lava
+            
 
             case 13:
 
@@ -10710,7 +10482,7 @@ var drawBlock = function(x,y){
 
                 break;
 
-            //flowing lava
+            
 
             case 14:
 
@@ -11264,7 +11036,7 @@ var drawBlock = function(x,y){
 
                 if(c>499&&world[y-1][x]===0&&world[y-2][x]===0&&world[y-3][x]===0&&world[y-2][x-1]===0&&world[y-2][x-2]===0&&world[y-2][x+2]===0&&world[y-2][x+1]===0&&world[y-3][x-2]===0&&world[y-3][x-1]===0&&world[y-3][x+1]===0&&world[y-3][x+2]===0&&world[y-4][x-2]===0&&world[y-4][x-1]===0&&world[y-4][x]===0&&world[y-4][x+1]===0&&world[y-4][x+2]===0&&world[y-5][x-1]===0&&world[y-5][x]===0&&world[y-5][x+1]===0){
 
-                    //trunk
+                    
 
                     world[y][x]=7;
 
@@ -11274,7 +11046,7 @@ var drawBlock = function(x,y){
 
                     world[y-3][x]=7;
 
-                    //leaves
+                    
 
                     world[y-2][x-1]=9;
 
@@ -20911,7 +20683,7 @@ fill(255, 0, 0);
 
 if(world[y][x]!==0&&!round(random(0,0.75))){
 
-    //text(power[y][x], x*40+scrollX+20, y*40+scrollY+20);
+    
 
 }
 
@@ -20933,9 +20705,9 @@ if(power[y][x]===undefined){
 
 var drawWorld = function(){
 
-    //translate(160,160);scale(0.25);
+    
 
-    //for debugging, I like to zoom out.
+    
 
     var sX=round((scrollX/40)-(scrollX/20)+5);
 
@@ -20977,7 +20749,7 @@ var dMiD = function(){
                     rect(xx+6.5,yy-49,3.5,1);
                     noStroke();
                     break;
-                case 8://The Ender Dragon
+                case 8:
         var yy = mobs.y[s]-(mobs.distance[s]*10)+scrollY;
         yy+=(200-yy)/(9-mobs.distance[s]);
         var xx = mobs.x[s]+scrollX;
@@ -21131,10 +20903,7 @@ var dMiD = function(){
                 }
             }resetMatrix();
             mobs.specs[s]++;
-            /*if(mobs.specs[s]>=400){
-                mobs.specs[s]=0;
-                background(255);
-            }*/
+            
             if(mobs.specs[s]>=400){
                 mobs.health[s]=0;
                 background(255);
@@ -21175,7 +20944,7 @@ var dMiD = function(){
 
         if(mobs.health[s]<=0){
             mobs.health[s]=1;
-            mobs.state[s]=-1;  //Begin death animation
+            mobs.state[s]=-1;  
             mobs.distance[s]=7;
         }
             }
@@ -21399,7 +21168,7 @@ var dMiD = function(){
 var keys = [];
 
 var sunPos = 100;
-//The almighty draw function.
+
 draw = function() {
 
 try{
@@ -21420,7 +21189,7 @@ for(var i = 0; i < 40; i++){
 
     }
 
-//This loop can only function if you're alive
+
 
 if(bennimusStudios===false&&!onTitleScreen&&!onPoem){
 
@@ -22885,7 +22654,7 @@ rect(0, -5, 20, 25);
 
 fill(143, 112, 62);
 
-rect(20,10,5,11);//Squidward noses
+rect(20,10,5,11);
 
 fill(110, 78, 28);
 
@@ -23645,7 +23414,7 @@ for(var i = 0; i < mobs.length; i++){
 
 }
 
-//You
+
 
 if(hungerTimer>0){
 
@@ -23801,7 +23570,7 @@ if(!solidBlocks[world[posA-(-1)][posB]]&&!solidBlocks[world[posA-(-1)][posB2]]){
 
 }
 
-//to prevent infinity health hax
+
 
 if(health>20){
 
@@ -24369,7 +24138,7 @@ if(place+50>world[0].length){
 
 }
 
-//the hotbar
+
 
 if(hide===false){
 
@@ -24441,7 +24210,7 @@ for(var i=0; i<9; i++){
 
 if(!isDead){
 
-//Hearts, armor, etc.
+
 
 if(shake===2){
 
@@ -24549,7 +24318,7 @@ for(var i = 0; i < hunger/2; i++){
 
 }
 
-//Now to select what blocks to place.
+
 
 if(inventory===false&&news===false&&isCrafting===false&&isSmelting===false){
 a = (mouseY/40 + 0.5 - scrollY/40).toFixed(0, 0) - 1;
@@ -25068,7 +24837,7 @@ if(mPressed&&mouseButton===RIGHT){
 
         }
 
-    }//255, 140, 40, 40
+    }
 
     if(mouseX>255&&mouseX<295&&mouseY>140&&mouseY<180){
 
@@ -25100,7 +24869,7 @@ if(mPressed&&mouseButton===RIGHT){
 
         }
 
-        }//d*35+250, e*30+195
+        }
 
     }else if(mouseX>240&&mouseX<310&&mouseY>185&&mouseY<255){
 
@@ -25865,15 +25634,7 @@ var smeltedSpecs = targetFurnace[9];
 
 var burnTime = targetFurnace[10];
 
-/*
 
-255, 50, 40, 40
-
-255, 130, 40, 40
-
-255, 240, 40, 40
-
-*/
 
 if(mouseX>255&&mouseX<295&&mouseY>240&&mouseY<280&&mPressed){
 
@@ -26053,11 +25814,11 @@ if(keyTimer>0&&isSprinting===false){
 
         if(keys[68]){
 
-            //direction=LEFT;
+            
 
             posB2 = ((posX+30)/40 - (posX+30)/20 + 6).toFixed(0, 0);
 
-            if(((!solidBlocks[world[posA][posB2]]||(world[posA][posB2]===28&&specs[posA][posB2]===0)||(world[posA][posB2]===29&&specs[posA][posB2]===0))&&(!solidBlocks[world[posA2][posB2]]||(world[posA2][posB2]===28&&specs[posA2][posB2]===0)||(world[posA2][posB2]===29&&specs[posA2][posB2]===0))&&(!solidBlocks[world[posA2-1][posB2]]||(world[posA2-1][posB2]===28&&specs[posA2-1][posB-1]===0)||(world[posA2-1][posB2]===29&&specs[posA2-1][posB2]===0))&&gamemode===0)||gamemode===1){/**RANDOM BLUE TEXT**/
+            if(((!solidBlocks[world[posA][posB2]]||(world[posA][posB2]===28&&specs[posA][posB2]===0)||(world[posA][posB2]===29&&specs[posA][posB2]===0))&&(!solidBlocks[world[posA2][posB2]]||(world[posA2][posB2]===28&&specs[posA2][posB2]===0)||(world[posA2][posB2]===29&&specs[posA2][posB2]===0))&&(!solidBlocks[world[posA2-1][posB2]]||(world[posA2-1][posB2]===28&&specs[posA2-1][posB-1]===0)||(world[posA2-1][posB2]===29&&specs[posA2-1][posB2]===0))&&gamemode===0)||gamemode===1){
 
                 if(keyTimer>0){
 
@@ -26093,7 +25854,7 @@ if(keyTimer>0&&isSprinting===false){
 
         if(keys[65]){
 
-            //direction=RIGHT;
+            
 
             if(((!solidBlocks[world[posA][posB-1]]||(world[posA][posB-1]===28&&specs[posA][posB-1]===0)||(world[posA][posB-1]===29&&specs[posA][posB-1]===0))&&(!solidBlocks[world[posA2][posB-1]]||(world[posA2][posB-1]===28&&specs[posA2][posB-1]===0)||(world[posA2][posB-1]===29&&specs[posA2][posB-1]===0))&&(!solidBlocks[world[posA2-1][posB-1]]||(world[posA2-1][posB-1]===28&&specs[posA2-1][posB-1]===0)||(world[posA2-1][posB-1]===29&&specs[posA2-1][posB-1]===0))&&gamemode===0)||gamemode===1){
 
@@ -26239,7 +26000,7 @@ if(keyCode>48&&keyCode<58&&onInputBox===false){
 
 }
 
-//Now to make it so we can break blocks.
+
 
 if(!mPressed){
 
@@ -26303,11 +26064,7 @@ if(mPressed&&mouseButton===LEFT&&inventory===false&&news===false&&world[a][b]!==
 
             }
 
-            /*if(world[a][b]!==0){
-
-                broadcast(selDurability);
-
-            }*/
+            
 
             blockTargeted = [a, b];
 
@@ -27008,7 +26765,7 @@ if(nether===true||night===true||end===true){
 
     }
 
-//the Debug menu
+
 
 if(keyIsPressed&&keyCode===114&&debugMenu===false){
 
@@ -27024,7 +26781,7 @@ if(keyIsPressed&&keyCode===114&&debugMenu===false){
 
 }
 
-//The Inventory
+
 
 if(keyCode===69&&(isCrafting||isSmelting||isTrading)&&!onInputBox){
 
@@ -27948,89 +27705,9 @@ if(isCrafting){
 
 }
 
-/*if(keyCode===113){
 
-    broadcast("World saved and printed.");
 
-    broadcast("Copy the code over var world.");
 
-    println("var world = [");
-
-    if(nether===false){
-
-        for(var m = 0; m < world.length; m++){
-
-            if(m===world.length-1){
-
-                println("["+world[m]+"]];");
-
-            }else{
-
-                println("["+world[m]+"],");
-
-            }
-
-        }
-
-    }else{
-
-        for(var n = 0; n < overWorld.length; n++){
-
-            if(n===overWorld.length-1){
-
-                println("["+overWorld[n]+"]];");
-
-            }else{
-
-                println("["+overWorld[n]+"],");
-
-            }
-
-        }
-
-    }
-
-    println("var netherWorld = [");
-
-    if(nether===false){
-
-        for(var o = 0; o < netherWorld.length; o++){
-
-            if(o===netherWorld.length-1){
-
-                println("["+netherWorld[o]+"]];");
-
-            }else{
-
-                println("["+netherWorld[o]+"],");
-
-            }
-
-        }
-
-    }else{
-
-        for(var p = 0; p < world.length; p++){
-
-            if(p===world.length-1){
-
-                println("["+world[p]+"]];");
-
-            }else{
-
-                println("["+world[p]+"],");
-
-            }
-
-        }
-
-    }
-
-    keyCode=0;
-
-}*/
-
-//the Bennimus Studios logo
 
 scale(0.25, 0.25);
 
