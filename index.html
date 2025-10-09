@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Minecraft</title>
+    <style>
+      body {
+        margin: 0;
+        background: #141414;
+        color: #fff;
+        font-family: "Fira Sans", system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      canvas {
+        margin-top: 1.5rem;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .instructions {
+        max-width: 520px;
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini Minecraft Survival</h1>
+    <p class="instructions">
+      Move with <strong>WASD</strong> or arrow keys. Left click to mine, right
+      click to place the selected block. Scroll the mouse wheel to change the
+      active hotbar slot, press <strong>E</strong> to craft, and hit the space bar
+      to eat collected berries.
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
