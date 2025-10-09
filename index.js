@@ -35,7 +35,6 @@ var hungerTimer = 100;
 
 var starveTimer = 10;
 
-var MPscreen = false;
 
 var isTrading = false;
 
@@ -28500,46 +28499,6 @@ if(optionsScreen){
 
     }
 
-}else if(MPscreen){
-
-    cursor(ARROW);
-
-    background(117, 64, 0);
-
-    fill(225);
-
-    textSize(50);
-
-    textAlign(CENTER, CENTER);
-
-    text("Multiplayer", 200, 50);
-
-    textSize(20);
-
-    stroke(0);
-
-    button(20, 185, 160, 30, 20, false, "Survival        ");
-
-    button(220, 185, 160, 30, 21, false, "        Creative");
-
-    button(20, 360, 100, 30, 22, true, "Back");
-
-    drawBlocks(316, 144, 190);
-
-    drawBlocks(6, 234, 190);
-
-    textSize(12);
-
-    fill(255, 255, 100);
-
-    text("Sorry if I mislead you, but this right here is the future. As you can see, there will be a survival and creative server where you can play with your friends, show off your builds, or simply hang around and chat. I would appreciate it if I could get a collaboration of people working on this project. We can get this to work!",20,250,360,100);
-
-    if(functions[22]){
-
-        MPscreen=false;
-
-    }
-
 }else if(onTitleScreen){
 
     cursor(ARROW);
@@ -28624,7 +28583,6 @@ if(optionsScreen){
 
     button(125, 140, 150, 30, 0, true, "Singleplayer");
 
-    button(125, 175, 150, 30, 2, false, "Multiplayer");
 
     button(125, 210, 150, 30, 1, true, "Options");
 
@@ -28680,11 +28638,6 @@ if(optionsScreen){
 
     }
 
-    if(functions[2]){
-
-        MPscreen=true;
-
-    }
 
 }
 
