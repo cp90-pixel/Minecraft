@@ -57,14 +57,14 @@ const BLOCKS = {
     id: BlockId.GRASS,
     name: "Grass",
     color: [104, 170, 67],
-    solid: true,
+    solid: false,
     drops: () => ({ id: BlockId.DIRT, name: "Dirt" }),
   },
   [BlockId.DIRT]: {
     id: BlockId.DIRT,
     name: "Dirt",
     color: [128, 98, 60],
-    solid: true,
+    solid: false,
     drops: () => ({ id: BlockId.DIRT, name: "Dirt" }),
   },
   [BlockId.STONE]: {
